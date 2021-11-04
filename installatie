@@ -1,0 +1,102 @@
+sudo apt update
+sudo apt upgrade
+
+sudo apt install openssh-server
+
+sudo apt install apache2
+
+sudo a2enmod ssl
+sudo systemctl restart apache2
+Create SSL Certificate
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ssl1.key -out /etc/ssl/certs/ssl1.crt
+
+Configure Apache to use SSL
+sudo nano /etc/apache2/sites-available/your_domain_or_ip.conf
+<VirtualHost *:443>
+   ServerName your_domain_or_ip
+   DocumentRoot /var/www/your_domain_or_ip
+
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/ssl1.crt
+   SSLCertificateKeyFile /etc/ssl/private/ssl1.key
+</VirtualHost>
+
+https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart
+Step 1 — Installing PostgreSQL
+sudo apt install postgresql postgresql-contrib
+
+Step 2 — Using PostgreSQL Roles and Databases
+sudo -u postgres psql
+
+
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql
+
+postgres=# create database mydb;
+postgres=# create user myuser with encrypted password 'mypass';
+postgres=# grant all privileges on database mydb to myuser;
+
+psql --version
+
+sudo apt install git
+
+sudo apt install default-jdk
+
+install dbeaver
+
+install intellij-idea ultimate
+
+install webstorm
+
+install prejectlibre
+
+install visual Paradigm
+
+-------------------------------------------------------------------------------------------------
+sudo apt update
+sudo apt upgrade
+sudo apt install apache2
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql
+
+sudo -u postgres psql postgres
+
+postgres=# create database springboot;
+postgres=# create user springboot with encrypted password 'springboot';
+postgres=# grant all privileges on database springboot to springboot;
+
+\q
+
+psql --version
+
+sudo apt install git
+
+sudo apt install default-jdk
+
+install webstorm
+
+install intellij-idea ultimate
+
+install dbeaver
+
+install microsoft teams
+
+install projectlibre
+
+install visual Paradigm comunity edidtion
+bash ./Visual_Paradigm_CE_16_3_20211004_Linux64.sh
+
+Install google Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+
+
+
+
