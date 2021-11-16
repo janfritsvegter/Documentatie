@@ -35,9 +35,16 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 sudo apt-get update
 sudo apt-get -y install postgresql
 
+sudo -u postgres psql
 postgres=# create database mydb;
 postgres=# create user myuser with encrypted password 'mypass';
 postgres=# grant all privileges on database mydb to myuser;
+postgres-# \q
+to quit
+
+create database springbootcursus;
+create user springbootcursus with encrypted password 'springbootcursus';
+grant all privileges on database springbootcursus to springbootcursus;
 
 psql --version
 
